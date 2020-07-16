@@ -26,4 +26,6 @@ def getWordScore(word, n):
     if len(word) == n:
         count += 50
     return count
-print(getWordScore("hello", 7))
+score = 0
+score += getWordScore("hello",7)
+print("the value is " + str(getWordScore("hello", 7)) + str(score))

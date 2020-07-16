@@ -111,6 +111,7 @@ def hangman(secretWord):
     '''
     print('Welcome to the game, Hangman!')
     print('I am thinking of word that is ' + str(len(secretWord)) + ' letters long.')
+    print('-----------')
     attempts = 8
     available_letters = []
     lettersGuessed =[]
@@ -133,15 +134,18 @@ def hangman(secretWord):
             elif (guess_lower_case in lettersGuessed):
                 words_guessed = getGuessedWord(secretWord, lettersGuessed)
                 print("Oops! You've already guessed that letter: "+ words_guessed)
+                print('-----------')
             elif (guess_lower_case not in secretWord):
                 attempts -= 1
                 lettersGuessed.append(guess_lower_case)
                 words_guessed = getGuessedWord(secretWord, lettersGuessed)
                 print("Oops! That letter is not in my word: "+ words_guessed)
+                print('-----------')
             else:
                 lettersGuessed.append(guess_lower_case)
                 words_guessed = getGuessedWord(secretWord, lettersGuessed)
                 print('Good guess: ' + words_guessed)
+                print('-----------')
 
 
 
